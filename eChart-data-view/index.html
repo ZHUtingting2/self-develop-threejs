@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+  <div class="data-view" id="app">
+    <div class="robot" id="robot1"></div>
+    <div class="robot" id="robot"></div>
+    <div class="showChart">
+      <header>
+        <h1>Robot-Echarts</h1>
+        <div class="showTime">当前时间：2023年9月23-0时54分14秒</div>
+        <script>
+          var t = null;
+          t = setTimeout(time, 1000); //開始运行
+          function time() {
+            clearTimeout(t); //清除定时器
+            dt = new Date();
+            var y = dt.getFullYear();
+            var mt = dt.getMonth() + 1;
+            var day = dt.getDate();
+            var h = dt.getHours(); //获取时
+            var m = dt.getMinutes(); //获取分
+            var s = dt.getSeconds(); //获取秒
+            document.querySelector(".showTime").innerHTML =
+              "当前时间：" +
+              y +
+              "年" +
+              mt +
+              "月" +
+              day +
+              "-" +
+              h +
+              "时" +
+              m +
+              "分" +
+              s +
+              "秒";
+            t = setTimeout(time, 1000); //设定定时器，循环运行
+          }
+        </script>
+      </header>
+      <section class="mainbox">
+        <div class="column">
+          <div class="panel line">
+            <h2>Robot销量</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+          </div>
+          <div class="panel pie">
+            <h2>Robot销量地区分布</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+          </div>
+        </div>
+        <div class="column">
+
+        </div>
+        <div class="column">
+          <div class="panel bar">
+            <h2>Robot销售行业</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+          </div>
+          <div class="panel pie1">
+            <h2>销售年龄范围</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- <div class="robot-convert">
+        <div class="btn">
+          <div class="public top" id="clickLeft">大头勇士</div>
+          <div class="public top" id="clickRight">百变小怪</div>
+        </div>
+        <div class="btn">
+          <div class="public bottom" id="dance">dance</div>
+          <div class="public bottom" id="death">death</div>
+          <div class="public bottom" id="jump">jump</div>
+          <div class="public bottom" id="walking">walking</div>
+        </div>
+      </div> -->
+  </div>
+
+  <script type="module" src="/main.js"></script>
+  <script src="js/flexible.js"></script>
+  <script src="js/echarts.min.js"></script>
+  <script src="js/mainCharts.js"></script>
+</body>
+
+</html>

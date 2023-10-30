@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.robot {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+header {
+  position: relative;
+  height: 1.25rem;
+  background: url(/images/head_bg.png) no-repeat top center;
+  background-size: 100% 100%;
+}
+header h1 {
+  color: white;
+  font-size: 0.475rem;
+  line-height: 1rem;
+  text-align: center;
+}
+header .showTime {
+  position: absolute;
+  top: 0;
+  right: 0.375rem;
+  line-height: 0.9375rem;
+  font-size: 0.25rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+.mainbox {
+  min-width: 1024px;
+  padding: 0.125rem 0.125rem 0;
+  display: flex;
+}
+.mainbox .column {
+  flex: 3;
+}
+.mainbox .column:nth-child(2) {
+  flex: 5;
+  margin: 0 0.125rem 0.1875rem;
+  overflow: hidden;
+}
+.panel {
+  position: relative;
+  height: 3.875rem;
+  border: 1px solid rgba(25, 186, 139, 0.17);
+  background: url(/images/line.png);
+  padding: 0 0.1875rem 0.5rem;
+  margin-bottom: 0.1875rem;
+}
+.panel:nth-child(1) {
+  margin-top: 0.25rem;
+}
+.panel:nth-child(2) {
+  margin-top: 0.5rem;
+}
+.panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #02a6b5;
+  border-left: 2px solid #02a6b5;
+}
+.panel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #02a6b5;
+  border-right: 2px solid #02a6b5;
+}
+.panel .panel-footer {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+.panel .panel-footer::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #02a6b5;
+  border-left: 2px solid #02a6b5;
+}
+.panel .panel-footer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #02a6b5;
+  border-right: 2px solid #02a6b5;
+}
+.panel h2 {
+  height: 0.6rem;
+  line-height: 0.6rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.25rem;
+  font-weight: 400;
+}
+.panel .chart {
+  height: 3rem;
+}
+.robot-convert {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  bottom: 0;
+}
+.robot-convert .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 700px;
+  height: 100px;
+}
+.robot-convert .btn .public {
+  background-color: rgba(2, 166, 181, 0.3);
+  margin: 0 50px;
+  border: 2px solid #02a6b5;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+.robot-convert .btn .top {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+}
+.robot-convert .btn .bottom {
+  width: 80px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 40px;
+}
